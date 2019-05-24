@@ -14,17 +14,6 @@ The repository includes:
 
 The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository (bibtex will be below later on). The dataset was created by using the Screw Detector in the offline mode, which can be triggered once the ROS-Node is up and running. You can use this mode to collect images for your own dataset.
 
-# Requirements
-
-- ROS Melodic
-- tensorflow-gpu==1.9.0
-- opencv-python==3.4.3.18
-- 
-
-- Weights: 
-- Dataset: https://owncloud.gwdg.de/index.php/s/iqljlhv5UT38NeY 
-
-
 # Contributing
 
 Contributions to this repository are welcome. Examples of things you can contribute:
