@@ -1,0 +1,106 @@
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/267.png 24,34,48,63,0 26,452,50,481,0 341,468,365,497,0 290,21,314,50,0 684,451,708,480,0 685,32,709,61,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/31.png 303,406,339,444,0 521,164,557,202,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/88.png 106,292,130,314,0 45,153,72,179,0 104,398,127,417,0 81,62,105,84,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/30.png 431,323,467,361,0 1094,537,1130,575,0 1031,703,1067,741,0 981,77,1017,115,0 985,273,1021,311,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/159.png 238,283,263,307,0 106,438,131,462,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/365.png 142,180,180,219,0 652,83,690,122,0 1080,75,1118,114,0 154,700,192,739,0 654,713,692,752,0 1067,695,1105,734,0 824,486,881,536,0 938,543,995,593,0 842,613,899,663,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/90.png 43,331,72,361,0 527,341,551,363,0 523,105,550,131,0 45,112,72,138,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/143.png 89,21,114,45,0 669,445,694,469,0 456,446,481,472,0 456,27,481,53,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/165.png 160,312,185,336,0 259,151,285,175,0 359,313,384,337,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/208.png 198,207,222,236,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/322.png 315,131,352,164,0 641,392,678,429,0 237,945,273,982,0 503,946,539,983,0 732,891,768,928,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/271.png 33,283,51,302,0 37,65,55,84,0 295,68,313,87,0 294,338,312,357,0 174,426,192,445,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/20.png 640,264,686,302,0 924,368,970,406,0 690,563,733,601,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/185.png 42,33,70,63,0 469,22,497,52,0 28,447,56,477,0 553,444,581,474,0 42,783,70,813,0 554,797,582,827,0 110,607,138,637,0 214,592,242,622,0 169,688,197,718,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/200.png 529,211,558,242,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/212.png 20,59,46,83,0 398,55,422,81,0 398,338,422,364,0 25,342,49,368,0 394,567,418,593,0 23,569,47,595,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/156.png 514,418,537,442,0 336,335,361,359,0 299,153,324,177,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/369.png 728,400,761,437,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/136.png 705,573,740,617,0 648,278,683,322,0 937,378,972,422,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/192.png 288,138,337,192,0 610,75,659,129,0 1225,88,1274,142,0 102,496,151,550,0 1238,505,1287,559,0 215,836,264,890,0 1168,920,1217,974,0 592,902,641,956,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/290.png 803,681,843,730,0 1083,853,1123,902,0 1126,595,1166,644,0 1130,221,1170,270,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/17.png 702,48,747,86,0 696,717,741,755,0 178,78,223,116,0 1001,299,1046,337,0 854,133,899,171,0 178,716,223,754,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/336.png 271,1030,313,1075,0 318,849,360,894,0 284,585,326,630,0 523,808,565,853,0 764,1022,806,1067,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/285.png 766,687,806,736,0 1086,593,1126,642,0 1050,850,1090,899,0 1086,218,1126,267,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/315.png 642,58,684,104,0 727,437,769,483,0 799,320,841,366,0 866,440,908,486,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/307.png 229,409,269,452,0 1042,807,1082,850,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/26.png 640,246,665,270,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/97.png 252,279,279,305,0 228,135,259,161,0 121,229,148,255,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/84.png 454,213,481,236,0 455,298,478,317,0 527,253,552,274,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/201.png 73,75,126,128,0 722,48,775,101,0 1315,81,1368,134,0 1308,925,1361,978,0 808,946,861,999,0 70,919,123,972,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/331.png 212,1037,267,1093,0 943,836,998,892,0 944,1154,999,1210,0 272,1258,327,1314,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/348.png 233,402,255,427,0 422,280,444,305,0 500,378,522,403,0 571,414,593,439,0 569,59,591,84,0 514,50,536,75,0 306,51,328,76,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/155.png 90,239,115,263,0 404,176,429,200,0 435,355,460,379,0 582,240,607,264,0 223,94,248,118,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/160.png 165,270,190,294,0 124,455,149,479,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/153.png 528,254,553,278,0 454,295,479,319,0 456,214,481,238,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/230.png 561,107,585,136,0 322,434,346,463,0 587,403,611,432,0 72,392,96,421,0 320,32,344,61,0 72,80,96,109,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/335.png 828,760,899,846,0 522,846,593,932,0 350,929,421,1015,0 677,561,748,647,0 570,243,641,329,0 350,511,421,597,0 543,1048,614,1134,0 306,1167,377,1253,0 840,1175,911,1261,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/347.png 362,828,411,889,0 568,936,617,997,0 207,926,256,987,0 352,676,401,737,0 559,605,608,666,0 451,448,500,509,0 233,401,282,462,0 376,199,425,260,0 230,739,279,800,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/138.png 1112,530,1159,571,0 1045,702,1092,743,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/2.png 421,85,459,118,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/377.png 1102,74,1138,107,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/357.png 735,581,787,631,0 951,685,1008,735,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/194.png 20,35,53,66,0 288,20,321,51,0 683,33,716,64,0 24,451,57,482,0 339,465,372,496,0 683,449,716,480,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/227.png 44,645,84,694,0 994,650,1034,699,0 62,52,102,101,0 983,54,1023,103,0 69,1325,109,1374,0 969,1335,1009,1384,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/202.png 246,409,299,462,0 945,299,998,352,0 952,796,1005,849,0 210,808,263,861,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/283.png 576,516,631,571,0 273,902,328,957,0 516,182,571,237,0 247,111,302,166,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/330.png 184,1161,239,1217,0 417,978,472,1034,0 83,1201,138,1257,0 941,1219,996,1275,0 947,714,1002,770,0 86,707,141,763,0 659,581,714,637,0 328,523,383,579,0 545,262,600,318,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/345.png 631,384,676,436,0 724,879,769,931,0 493,938,538,990,0 231,936,276,988,0 308,118,353,170,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/25.png 692,574,728,612,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/140.png 166,73,209,117,0 692,49,733,93,0 690,718,730,762,0 991,296,1034,340,0 168,710,209,754,0 852,132,892,176,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/284.png 569,265,624,320,0 350,523,405,578,0 678,585,733,640,0 835,780,890,835,0 531,865,586,920,0 356,949,411,1004,0 548,1066,603,1121,0 848,1202,903,1257,0 316,1182,371,1237,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/0.png 703,699,735,732,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/28.png 945,401,981,439,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/340.png 726,593,768,638,0 200,386,244,431,0 782,383,832,428,0 472,641,522,687,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/262.png 29,93,81,140,0 994,91,1046,138,0 988,787,1040,834,0 29,786,81,833,0 994,1362,1046,1409,0 26,1356,78,1403,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/117.png 258,148,290,178,0 356,310,389,342,0 161,307,188,339,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/57.png 646,260,675,290,0 252,206,276,228,0 113,457,137,479,0 293,230,317,251,0 441,63,465,85,0 205,231,232,254,0 457,448,484,474,0 296,277,319,296,0 252,300,277,325,0 208,277,232,299,0 681,383,710,413,0 618,186,642,208,0 581,94,605,116,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/318.png 57,110,80,136,0 58,343,81,369,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/5.png 638,244,663,268,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/280.png 526,292,566,341,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/214.png 194,412,231,458,0 260,843,297,889,0 768,855,805,901,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/343.png 385,372,411,401,0 506,402,532,431,0 493,49,519,78,0 353,222,379,251,0 204,398,230,427,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/327.png 417,88,452,118,0 368,586,403,616,0 667,991,702,1021,0 64,987,99,1017,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/302.png 303,49,327,78,0 421,275,445,304,0 512,48,536,77,0 568,57,592,86,0 229,400,253,429,0 496,378,520,407,0 570,413,594,442,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/279.png 263,419,303,468,0 643,316,683,365,0 307,110,347,159,0 246,866,286,915,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/241.png 56,430,80,459,0 363,481,387,510,0 689,453,713,482,0 665,122,689,151,0 369,37,393,66,0 61,83,85,112,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/80.png 301,154,325,178,0 332,334,359,360,0 513,415,540,441,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/316.png 371,51,394,77,0 462,362,485,388,0 555,335,578,361,0 511,49,534,75,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/320.png 725,260,763,292,0 1138,229,1176,261,0 900,748,938,780,0 629,778,667,810,0 1131,855,1169,887,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/82.png 250,80,275,103,0 426,260,450,282,0 90,80,114,102,0 437,222,461,243,0 411,194,435,216,0 374,200,401,226,0 90,239,117,263,0 390,268,413,287,0 252,397,277,418,0 195,347,219,369,0 521,404,546,425,0 363,240,388,261,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/128.png 980,275,1020,306,0 1094,525,1137,571,0 982,68,1023,112,0 1029,699,1069,743,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/220.png 377,25,401,54,0 674,114,698,143,0 68,421,92,450,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/3.png 945,410,983,453,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/286.png 833,727,873,776,0 587,582,627,631,0 788,405,828,454,0 840,661,880,710,0 1073,840,1113,889,0 680,242,720,291,0 1068,242,1108,291,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/287.png 341,69,365,98,0 491,275,515,304,0 377,423,401,452,0 510,423,534,452,0 507,48,531,77,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/211.png 528,215,552,241,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/69.png 220,97,249,120,0 435,355,459,377,0 402,177,426,199,0 87,238,114,264,0 583,241,607,263,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/296.png 389,206,429,255,0 466,455,506,504,0 237,409,277,458,0 669,561,709,610,0 59,557,99,606,0 666,962,706,1011,0 295,769,335,818,0 57,947,97,996,0 130,913,170,962,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/282.png 370,256,394,285,0 442,256,466,285,0 404,189,428,218,0 324,416,348,445,0 93,420,117,449,0 177,178,201,207,0 319,50,343,79,0 91,53,115,82,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/207.png 200,129,223,155,0 260,169,283,195,0 177,65,197,92,0 59,26,81,49,0 257,22,277,44,0 23,214,41,237,0 301,209,319,234,0 160,292,178,317,0 62,421,80,446,0 282,433,300,458,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/76.png 219,129,243,158,0 142,274,166,303,0 300,274,324,303,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/18.png 626,275,671,313,0 911,380,956,418,0 679,574,724,612,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/263.png 209,57,238,87,0 766,66,795,96,0 192,444,221,474,0 783,447,812,477,0 772,907,801,937,0 201,910,230,940,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/236.png 142,790,182,839,0 97,122,137,171,0 691,64,731,113,0 1241,862,1281,911,0 689,959,729,1008,0 1243,163,1283,212,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/317.png 509,56,532,82,0 504,269,527,295,0 327,320,350,346,0 483,420,506,446,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/277.png 1083,218,1123,267,0 1082,593,1122,642,0 763,690,803,739,0 1047,852,1087,901,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/292.png 626,769,666,818,0 727,250,767,299,0 1129,838,1169,887,0 899,736,939,785,0 1139,219,1179,268,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/233.png 30,24,54,53,0 578,440,602,469,0 502,834,526,863,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/291.png 243,867,283,916,0 642,922,682,971,0 967,852,1007,901,0 386,1174,426,1223,0 388,1335,428,1384,0 122,1378,162,1427,0 977,1300,1017,1349,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/278.png 338,531,393,586,0 560,270,615,325,0 671,588,726,643,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/334.png 198,388,245,435,0 782,388,829,435,0 722,597,769,644,0 474,646,521,693,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/311.png 458,373,509,424,0 273,91,324,142,0 1174,95,1225,146,0 714,869,765,920,0 1177,892,1228,943,0 272,896,323,947,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/121.png 514,218,541,244,0 617,46,644,72,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/21.png 687,549,730,587,0 631,250,674,288,0 917,352,960,390,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/298.png 356,223,380,252,0 386,372,410,401,0 507,402,531,431,0 205,400,229,429,0 494,51,518,80,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/41.png 300,276,325,302,0 142,277,167,303,0 221,132,246,158,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/367.png 901,426,934,459,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/179.png 201,390,254,447,0 849,383,902,440,0 871,889,924,946,0 521,292,574,349,0 244,897,291,954,0 356,1255,409,1310,0 852,1236,905,1290,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/188.png 657,76,720,139,0 102,80,165,143,0 113,926,170,986,0 665,928,720,986,0 1274,78,1337,130,0 1290,915,1343,978,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/77.png 142,274,166,303,0 221,128,245,157,0 301,273,325,302,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/130.png 1022,666,1065,710,0 714,672,754,716,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/235.png 602,398,626,427,0 394,478,418,507,0 36,461,60,490,0 527,332,551,361,0 32,107,56,136,0 401,42,425,71,0 709,50,733,79,0 690,470,714,499,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/268.png 199,206,223,235,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/275.png 161,71,185,100,0 558,73,582,102,0 137,440,161,469,0 635,441,659,470,0 138,751,162,780,0 631,751,655,780,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/27.png 935,366,971,404,0 647,264,683,302,0 698,558,734,596,0 364,121,400,159,0 151,359,187,397,0
+/home/eren/ownCloud/imagine_images/screw_data/test_detection/222.png 369,36,393,65,0 665,124,689,153,0 62,83,86,112,0 59,430,83,459,0 687,453,711,482,0 363,480,387,509,0
