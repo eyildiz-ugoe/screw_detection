@@ -76,3 +76,6 @@ TN:  3247
 FP:  10  
 FN:  38
 accuracy:  0.9887981330221703`
+
+# Contact
+For questions, you can create an issue on Github or simply contact eyildiz@gwdg.de
