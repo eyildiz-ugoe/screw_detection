@@ -16,7 +16,7 @@ The code is documented and designed to be easy to extend. If you use it in your 
 
 # Citation
 Use this bibtex to cite this repository:
-
+```
 @inproceedings{yildiz2019dcnn,
   title={DCNN-Based Screw Detection for Automated Disassembly Processes},
   author={Yildiz, Erenus and W{\"o}rg{\"o}tter, Florentin},
@@ -25,7 +25,7 @@ Use this bibtex to cite this repository:
   year={2019},
   organization={IEEE}
 }
-
+```
 # Contributing
 
 Contributions to this repository are welcome. Examples of things you can contribute:
