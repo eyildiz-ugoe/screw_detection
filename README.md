@@ -12,7 +12,7 @@ The repository includes:
     - Models
     - Dataset
 
-The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository (bibtex will be below later on). The dataset was created by using the Screw Detector in the offline mode, which can be triggered once the ROS-Node is up and running. You can use this mode to collect images for your own dataset.
+The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository. The dataset was created by using the Screw Detector in the offline mode, which can be triggered once the ROS-Node is up and running. You can use this mode to collect images for your own dataset.
 
 # Citation
 Use this bibtex to cite this repository:
