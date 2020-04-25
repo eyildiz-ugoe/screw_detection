@@ -2,7 +2,7 @@
 
 This is an implementation of Screw Detectoron Python 3, Keras, TensorFlow and ROS. The scheme uses Hough Transform to get the candidates and then runs the integrated model to classify the candidates into screws and artifacts. The integrated model is based on Xception and InceptionV3.
 
-Publicized code for the paper "DNN-Based Screw Detection for Automated Disassembly Processes"
+Publicized code for the paper [DCNN-Based Screw Detection for Automated Disassembly Processes](https://ieeexplore.ieee.org/abstract/document/9067965)
 
 ![Screw Detection Sample](assets/sample.png)
 
@@ -13,6 +13,18 @@ The repository includes:
     - Dataset
 
 The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository (bibtex will be below later on). The dataset was created by using the Screw Detector in the offline mode, which can be triggered once the ROS-Node is up and running. You can use this mode to collect images for your own dataset.
+
+# Citation
+Use this bibtex to cite this repository:
+
+@inproceedings{yildiz2019dcnn,
+  title={DCNN-Based Screw Detection for Automated Disassembly Processes},
+  author={Yildiz, Erenus and W{\"o}rg{\"o}tter, Florentin},
+  booktitle={2019 15th International Conference on Signal-Image Technology \& Internet-Based Systems (SITIS)},
+  pages={187--192},
+  year={2019},
+  organization={IEEE}
+}
 
 # Contributing
 
