@@ -54,9 +54,8 @@ If you are only interested in the results and evaluation, follow the below steps
 
 1. Clone this repository.
 2. Install python3, tensorflow-gpu==1.9.0, opencv-python==3.4.3.18 preferably via pip, as well as other required packages if they are asked for.
-3. Download the weights: https://owncloud.gwdg.de/index.php/s/PJIPYTvBteXlqhv
-4. Download the dataset: https://owncloud.gwdg.de/index.php/s/AJ7W6t1nrIxYnol
-5. Change the paths in each `.py`  file as you run since you'll probably face a path error, which you can then fix by entering your path of extraction.
+3. Download the TF records: https://zenodo.org/record/4727706#.ZAmeAGPMKRR
+4. Change the paths in each `.py`  file as you run since you'll probably face a path error, which you can then fix by entering your path of extraction.
 
 # Evaluating the models
 
@@ -90,4 +89,6 @@ FN:  38
 accuracy:  0.9887981330221703`
 
 # Contact
-For questions, you can create an issue on Github or simply contact eyildiz@gwdg.de
+For questions, you can create an issue on Github or simply contact erenus.yildiz@gmail.com
+
+**P.S**: For now, we only publish the TF records required to train and evaluate the network. There won't be accessible image dataset. You'll need to write your own code to make use of the TF records shared. 
