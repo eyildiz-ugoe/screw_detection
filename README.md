@@ -41,8 +41,7 @@ If you want to use the node directly on your system via ROS, follow the below st
 1. Clone this repository
 2. Install ROS (tested only on Melodic) from its official website.
 3. Install python3, tensorflow-gpu==1.9.0, opencv-python==3.4.3.18 preferably via pip.
-3. Download the weights: https://owncloud.gwdg.de/index.php/s/PJIPYTvBteXlqhv (Extract it and change the path in `src/candidate_generator.py` accordingly.
-4. Download the dataset (optional): https://owncloud.gwdg.de/index.php/s/AJ7W6t1nrIxYnol
+3. Download the TF records: https://zenodo.org/record/4727706#.ZAmeAGPMKRR
 5. Since the code is ROS-based, you'll need an RGB Camera and its ROS node which publishes RGB images. If you have these two, then you need to modify the following files to get the code working with your own camera:
    - `launch/screw_detection.launch`
    - `src/candidate_generator.py`
