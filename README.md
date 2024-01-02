@@ -89,5 +89,3 @@ accuracy:  0.9887981330221703`
 
 # Contact
 For questions, you can create an issue on Github or simply contact erenus.yildiz@gmail.com
-
-**P.S**: For now, we only publish the TF records required to train and evaluate the network. You'll need to write your own code to make use of the TF records shared. 
