@@ -1,6 +1,7 @@
 import tensorflow as tf
 import os
 
+
 def parse_tfrecord_fn(example):
     feature_description = {
         'image': tf.io.FixedLenFeature([], tf.string),
@@ -16,14 +17,14 @@ def load_dataset(tfrecord_path):
     parsed_dataset = raw_dataset.map(parse_tfrecord_fn)
     return parsed_dataset
 
-def save_images(dataset, base_folder):
+def save_images(dataset, base_folder, tfrecord_name):
     for i, (image, label) in enumerate(dataset):
         # Create subfolder based on the label
         subfolder = os.path.join(base_folder, f'label_{label.numpy()}')
         os.makedirs(subfolder, exist_ok=True)
 
         # Save the image to the subfolder with a unique filename
-        image_filename = os.path.join(subfolder, f'image_{i}.jpg')
+        image_filename = os.path.join(subfolder, f'image_{tfrecord_name}_{i}.jpg')
         try:
             tf.keras.preprocessing.image.save_img(image_filename, image.numpy())
             print(f"Saved image {i} in {subfolder}")
@@ -50,7 +51,7 @@ def main():
 
             if dataset is not None:
                 # Save the images to subfolders based on labels
-                save_images(dataset, os.path.join(base_folder, folder))
+                save_images(dataset, os.path.join(base_folder, folder), os.path.splitext(os.path.basename(tfrecord_file))[0])
 
 if __name__ == "__main__":
     main()
