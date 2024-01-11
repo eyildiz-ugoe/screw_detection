@@ -12,7 +12,7 @@ The repository includes:
     - Models
     - Dataset
 
-The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository. The dataset was created by using the Screw Detector in the offline mode, which can be triggered once the ROS-Node is up and running. You can use this mode to collect images for your own dataset. You can find the dataset(in `.h5` format), weights and sample predicted images under the [Download Link](https://fz-juelich.sciebo.de/s/O6Th0ob2lmhPjS9)
+The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository. The dataset was created by using the Screw Detector in the offline mode, which can be triggered once the ROS-Node is up and running. You can use this mode to collect images for your own dataset. You can find the dataset(in `.h5` format), weights and sample predicted images under the [Download Link](https://zenodo.org/records/10474868)
 
 # Citation
 Use this bibtex to cite this repository:
@@ -41,7 +41,7 @@ If you want to use the node directly on your system via ROS, follow the below st
 1. Clone this repository
 2. Install ROS (tested only on Melodic) from its official website.
 3. Install python3, tensorflow-gpu==1.9.0, opencv-python==3.4.3.18 preferably via pip.
-3. Download the weights: [Download Link](https://fz-juelich.sciebo.de/s/O6Th0ob2lmhPjS9).
+3. Download the weights: [Download Link](https://zenodo.org/records/10474868).
 4. Since the code is ROS-based, you'll need an RGB Camera and its ROS node which publishes RGB images. If you have these two, then you need to modify the following files to get the code working with your own camera:
    - `launch/screw_detection.launch`
    - `src/candidate_generator.py`
@@ -53,7 +53,7 @@ If you are only interested in the results and evaluation, follow the below steps
 
 1. Clone this repository.
 2. Install python3, tensorflow-gpu==1.9.0, opencv-python==3.4.3.18 preferably via pip, as well as other required packages if they are asked for.
-3. Download the weights: [Download Link](https://fz-juelich.sciebo.de/s/O6Th0ob2lmhPjS9).
+3. Download the weights: [Download Link](https://zenodo.org/records/10474868).
 4. Change the paths in each `.py`  file as you run since you'll probably face a path error, which you can then fix by entering your path of extraction.
 
 # Evaluating the models
