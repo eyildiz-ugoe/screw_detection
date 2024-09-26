@@ -12,7 +12,9 @@ The repository includes:
     - Models
     - Dataset
 
-The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository. The dataset was created by using the Screw Detector in the offline mode, which can be triggered once the ROS-Node is up and running. You can use this mode to collect images for your own dataset. You can find the dataset(in `.h5` format), weights and sample predicted images under the [Download Link](https://zenodo.org/records/10474868)
+The code is documented and designed to be easy to extend. If you use it in your research, please consider citing this repository. The dataset was created by using the Screw Detector in the offline mode, which can be triggered once the ROS-Node is up and running. You can use this mode to collect images for your own dataset. You can find the [dataset](https://zenodo.org/records/4727706), [weights](https://zenodo.org/records/10474868).
+
+
 
 # Citation
 Use this bibtex to cite this repository:
