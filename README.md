@@ -10,7 +10,7 @@ This repository provides the source code and resources associated with the paper
 - Pre-trained models and weights.
 - Dataset for training and evaluation.
 
-The code is well-documented and designed for easy extension. If this work is helpful in your research, please consider citing this repository. The dataset provided was generated using the Screw Detector in offline mode, which can be activated once the ROS Node is running. This mode enables image collection for creating custom datasets. You can access the dataset [here](https://zenodo.org/records/4727706) and the model weights [here](https://zenodo.org/records/10474868).
+If this work is helpful in your research, please consider citing this repository. You can access the dataset [here](https://zenodo.org/records/4727706) and the model weights [here](https://zenodo.org/records/10474868).
 
 ---
 
