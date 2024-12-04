@@ -1,0 +1,9 @@
+# Ignore .tfrecord files
+*.tfrecord
+
+# also model
+*.h5
+
+# Ignore the ScrewDTF directory
+/data/ScrewDTF/
+
