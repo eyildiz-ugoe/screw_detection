@@ -1,7 +1,7 @@
 
 # **DCNN-Based Screw Detection for Automated Disassembly Processes**
 
-This repository provides the source code and resources associated with the paper *[DCNN-Based Screw Detection for Automated Disassembly Processes](https://ieeexplore.ieee.org/abstract/document/9067965)*. The implementation uses Python 3, Keras, TensorFlow, and ROS, integrating advanced deep learning models for screw detection in automated disassembly workflows. The detection pipeline leverages Hough Transform to identify screw candidates, followed by classification into screws or artifacts using an integrated model based on Xception and InceptionV3.
+This repository provides the source code and resources associated with the paper *[DCNN-Based Screw Detection for Automated Disassembly Processes](https://ieeexplore.ieee.org/abstract/document/9067965)*. The implementation uses Python 3, Keras and TensorFlow, integrating advanced deep learning models for screw detection in automated disassembly workflows. The detection pipeline leverages Hough Transform to identify screw candidates, followed by classification into screws or artifacts using an integrated model based on Xception and InceptionV3.
 
 ![Screw Detection Sample](assets/sample.png)
 
@@ -28,50 +28,12 @@ To cite this work, please use the following BibTeX entry:
 }
 ```
 
----
-
-## **Contributing**
-Contributions are welcome! You can contribute by:
-- Training the model on new datasets.
-- Improving accuracy and performance.
-- Creating visualizations and usage examples.
-
----
-
 ## **Installation and Usage**
 
-### **ROS-Based Installation**
-To use the Screw Detector as a ROS node:
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Install ROS (tested with ROS Melodic) from the official website.
-3. Install the following dependencies:
-   - `python3`
-   - `tensorflow-gpu==1.9.0`
-   - `opencv-python==3.4.3.18`  
-     *(Install preferably using pip.)*
-4. Download the pre-trained model weights from [this link](https://zenodo.org/records/10474868).
-5. Set up an RGB camera and its corresponding ROS node to publish RGB images. Update the following files to ensure compatibility with your camera:
-   - `launch/screw_detection.launch`
-   - `src/candidate_generator.py`
-6. Launch the node with:
-   ```bash
-   roslaunch screw_detection screw_detection.launch
-   ```
-
-### **Standalone Installation**
 For standalone usage, such as result generation and evaluation:
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Install dependencies using pip:
-   - `python3`
-   - `tensorflow-gpu==1.9.0`
-   - `opencv-python==3.4.3.18`
-3. Download the pre-trained model weights from [this link](https://zenodo.org/records/10474868).
+1. Clone this repository.
+2. Go to sd_venv folder and run `bash setup.py` which will install the dependencies.
+3. Get back to the main project folder, and run `python setup.py` to download model and weights.
 4. Update paths in the Python files as necessary to avoid path errors during execution.
 
 ---
@@ -120,6 +82,4 @@ Follow these steps for evaluation:
 ## **Contact**
 For questions or support, you can:
 - Open an issue on the GitHub repository.
-- Contact the author via email: [erenus.yildiz@gmail.com](mailto:erenus.yildiz@gmail.com)
-
 ---
