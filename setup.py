@@ -144,7 +144,7 @@ def main():
     # Ensure dataset extraction created required folders
     folders = ['Test', 'Eval', 'Train']
     for folder in folders:
-        folder_path = os.path.join(base_folder, folder)
+        folder_path = os.path.join(base_folder, 'ScrewDTF', folder)
         if not os.path.exists(folder_path):
             logging.error(f"Folder not found: {folder_path}")
             return
