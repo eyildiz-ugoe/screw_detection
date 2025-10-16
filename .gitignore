@@ -1,9 +1,31 @@
-# Ignore .tfrecord files
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Dataset and model files (too large for git)
 *.tfrecord
-
-# also model
 *.h5
+ScrewDTF/
+models/
+data/
 
-# Ignore the ScrewDTF directory
-/data/ScrewDTF/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
 

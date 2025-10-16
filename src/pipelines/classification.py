@@ -101,7 +101,15 @@ def _build_resnet101_v2(tf, image_size, base_weights):
 
 
 def _build_resnext101(tf, image_size, base_weights):
-    from .. import resnet
+    import sys
+    from pathlib import Path
+    
+    # Add src directory to path if not already present
+    src_dir = Path(__file__).resolve().parent.parent
+    if str(src_dir) not in sys.path:
+        sys.path.insert(0, str(src_dir))
+    
+    import resnet
 
     return resnet.ResNeXt101(
         include_top=False,
@@ -289,9 +297,6 @@ def train_model(
         epochs=epochs,
         callbacks=callbacks,
     )
-
-    if output_weights is not None:
-        model.save_weights(str(output_weights))
 
     return history
 

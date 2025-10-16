@@ -3,3 +3,4 @@ matplotlib
 opencv-python
 requests
 tqdm
+tensorflow
