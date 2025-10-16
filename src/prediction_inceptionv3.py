@@ -1,66 +1,40 @@
-from __future__ import print_function, division
-import os.path
-import keras
-from keras import applications, metrics, layers, models, regularizers, optimizers
-from keras.applications import InceptionV3, Xception
-from keras.models import *
-from keras.layers import *
-import numpy as np
-import time, cv2, os
-from os.path import expanduser
+"""Evaluate a trained InceptionV3 classifier on screw vs. non-screw folders."""
+from __future__ import annotations
 
-# to get relative paths without using the user name
-home = expanduser('~')
+import argparse
+from pathlib import Path
 
-IMAGE_SIZE    = (139, 139)
-NUM_CLASSES   = 2
-
-base_model = InceptionV3(include_top=False,
-                        weights=None,
-                        input_tensor=None,
-                        input_shape=(IMAGE_SIZE[0],IMAGE_SIZE[1],3))
-x = base_model.output
-x = GlobalAveragePooling2D(name='avg_pool')(x)
-x = Dropout(0.5)(x)
-predictions = Dense(NUM_CLASSES, activation='softmax')(x)
-model = Model(inputs=base_model.input, outputs=predictions)
-
-model.load_weights(home + '/ownCloud/imagine_weights/screw_detector/pretrained_models/weights_inceptionv3/weights.15.h5', by_name=True)
-
-class_order = ['none', 'screw']
-
-imgs = os.listdir(home + '/ownCloud/imagine_images/screw_data/test1/non_screw/')
-
-tp,tn,fp,fn = 0,0,0,0
-for name in imgs:
-   image =cv2.imread(home + '/ownCloud/imagine_images/screw_data/test1/non_screw/' + name)
-   
-   image = cv2.resize(image, IMAGE_SIZE)
-   np_image_data = np.asarray(image)
-   np_image_data = np_image_data/255
-   np_final = np.expand_dims(np_image_data,axis=0)
-   aa = model.predict(np_final)
-   if aa[0][0]>0.5:
-     tn+=1
-   else:
-     fn +=1
-
-imgs = os.listdir(home + '/ownCloud/imagine_images/screw_data/test1/screw/)
-for name in imgs:
-   image =cv2.imread(home + '/ownCloud/imagine_images/screw_data/test1/screw/' + name)   
-   image = cv2.resize(image, IMAGE_SIZE)
-   np_image_data = np.asarray(image)
-   np_image_data = np_image_data/255
-   np_final = np.expand_dims(np_image_data,axis=0)
-   aa = model.predict(np_final)
-   if aa[0][0]>0.5:
-     fp+=1
-   else:
-     tp +=1
+from pipelines import MissingDependencyError, evaluate_directory
 
 
-accuracy = (tp+tn)/(tp+tn+fp+fn)
-print('================================')
-print('TP: ', tp, ' TN: ', tn, ' FP: ', fp, ' FN: ', fn)
-print('accuracy: ', accuracy)
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--weights", type=Path, required=True, help="Path to the trained weights file")
+    parser.add_argument("--screw-dir", type=Path, required=True, help="Directory with screw images")
+    parser.add_argument("--non-screw-dir", type=Path, required=True, help="Directory with non-screw images")
+    parser.add_argument("--threshold", type=float, default=0.5, help="Decision threshold for the screw class")
+    return parser
 
+
+def main(args: list[str] | None = None) -> None:
+    parser = build_parser()
+    namespace = parser.parse_args(args=args)
+
+    try:
+        metrics = evaluate_directory(
+            "inceptionv3",
+            weights_path=namespace.weights,
+            screw_dir=namespace.screw_dir,
+            non_screw_dir=namespace.non_screw_dir,
+            threshold=namespace.threshold,
+        )
+    except MissingDependencyError as exc:
+        parser.error(str(exc))
+    else:
+        print("==============================")
+        print("TP: {tp:.0f} TN: {tn:.0f} FP: {fp:.0f} FN: {fn:.0f}".format(**metrics))
+        print(f"Accuracy: {metrics['accuracy']:.4f}")
+
+
+if __name__ == "__main__":  # pragma: no cover
+    main()

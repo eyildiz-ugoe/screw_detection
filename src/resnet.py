@@ -1,20 +1,10 @@
-"""ResNet, ResNetV2, and ResNeXt models for Keras.
-# Reference papers
-- [Deep Residual Learning for Image Recognition]
-  (https://arxiv.org/abs/1512.03385) (CVPR 2016 Best Paper Award)
-- [Identity Mappings in Deep Residual Networks]
-  (https://arxiv.org/abs/1603.05027) (ECCV 2016)
-- [Aggregated Residual Transformations for Deep Neural Networks]
-  (https://arxiv.org/abs/1611.05431) (CVPR 2017)
-# Reference implementations
-- [TensorNets]
-  (https://github.com/taehoonlee/tensornets/blob/master/tensornets/resnets.py)
-- [Caffe ResNet]
-  (https://github.com/KaimingHe/deep-residual-networks/tree/master/prototxt)
-- [Torch ResNetV2]
-  (https://github.com/facebook/fb.resnet.torch/blob/master/models/preresnet.lua)
-- [Torch ResNeXt]
-  (https://github.com/facebookresearch/ResNeXt/blob/master/models/resnext.lua)
+"""ResNet, ResNetV2, and ResNeXt models for TensorFlow/Keras.
+
+This module is a lightly adapted copy of the legacy implementation that shipped
+with the repository. The original version depended on the stand-alone
+``keras`` package which is no longer maintained. The code below now imports its
+symbols from :mod:`tensorflow.keras` so that users only need the canonical
+TensorFlow distribution.
 """
 from __future__ import absolute_import
 from __future__ import division
@@ -22,19 +12,24 @@ from __future__ import print_function
 
 import os
 
-#from . import get_submodules_from_kwargs
-#from .imagenet_utils import _obtain_input_shape
-from keras_applications.imagenet_utils import _obtain_input_shape
-from keras.models import *
-from keras.layers import *
-from keras import backend 
-import keras.utils as keras_utils
-#from module import get_submodules_from_kwargs
-
-#backend = None
-#layers = None
-#models = None
-#keras_utils = None
+from tensorflow.keras import backend
+from tensorflow.keras.layers import (
+    Activation,
+    Add,
+    BatchNormalization,
+    Conv2D,
+    Dense,
+    DepthwiseConv2D,
+    GlobalAveragePooling2D,
+    GlobalMaxPooling2D,
+    Input,
+    Lambda,
+    MaxPooling2D,
+    Reshape,
+    ZeroPadding2D,
+)
+from tensorflow.keras.models import Model
+from tensorflow.keras.utils import get_file, get_source_inputs
 
 
 BASE_WEIGHTS_PATH = (
@@ -373,7 +368,7 @@ def ResNet(stack_fn,
     # Ensure that the model takes into account
     # any potential predecessors of `input_tensor`.
     if input_tensor is not None:
-        inputs = keras_utils.get_source_inputs(input_tensor)
+        inputs = get_source_inputs(input_tensor)
     else:
         inputs = img_input
 
@@ -388,10 +383,10 @@ def ResNet(stack_fn,
         else:
             file_name = model_name + '_weights_tf_dim_ordering_tf_kernels_notop.h5'
             file_hash = WEIGHTS_HASHES[model_name][1]
-        weights_path = keras_utils.get_file(file_name,
-                                            BASE_WEIGHTS_PATH + file_name,
-                                            cache_subdir='models',
-                                            file_hash=file_hash)
+        weights_path = get_file(file_name,
+                                BASE_WEIGHTS_PATH + file_name,
+                                cache_subdir='models',
+                                file_hash=file_hash)
         model.load_weights(weights_path)
     elif weights is not None:
         model.load_weights(weights)

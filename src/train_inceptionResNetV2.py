@@ -1,114 +1,46 @@
-from __future__ import print_function
+"""Command-line interface for training the Inception-ResNetV2 screw classifier."""
+from __future__ import annotations
 
-import os.path
+import argparse
+from pathlib import Path
 
-import keras
-from keras import applications, metrics, layers, models, regularizers, optimizers
-from keras.applications import InceptionResNetV2, Xception
-from keras.models import *
-from keras.layers import *
-from keras.callbacks import *
-from keras.optimizers import Adam, RMSprop
-from keras.preprocessing.image import ImageDataGenerator
-from keras.metrics import top_k_categorical_accuracy
-from os.path import expanduser
+from pipelines import MissingDependencyError, train_model
 
-# to get relative paths without using the user name
-home = expanduser('~')
 
-DATASET_PATH_train  = home + '/ownCloud/imagine_images/screw_data/train1'
-DATASET_PATH_val  = home + '/ownCloud/imagine_images/screw_data/val'
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--train-dir", type=Path, required=True, help="Directory with training images arranged by class")
+    parser.add_argument("--val-dir", type=Path, required=True, help="Directory with validation images arranged by class")
+    parser.add_argument("--output-weights", type=Path, default=None, help="Where to store the best model weights")
+    parser.add_argument("--log-dir", type=Path, default=None, help="Optional TensorBoard log directory")
+    parser.add_argument("--batch-size", type=int, default=8, help="Mini-batch size")
+    parser.add_argument("--epochs", type=int, default=15, help="Number of training epochs")
+    parser.add_argument("--freeze-layers", type=int, default=0, help="Freeze this many layers from the backbone")
+    parser.add_argument("--learning-rate", type=float, default=1e-4, help="Learning rate for Adam")
+    parser.add_argument("--initial-weights", type=Path, default=None, help="Optional checkpoint to start from")
+    return parser
 
-IMAGE_SIZE    = (139, 139)
-NUM_CLASSES   = 2
-BATCH_SIZE    = 8  # try reducing batch size or freeze more layers if your GPU runs out of memory
-FREEZE_LAYERS = 0  # freeze the first this many layers for training
-NUM_EPOCHS    = 15
 
-tensorboard_directory   = 'log_files/logs_InceptionResNetV2'
-weight_directory        = home + '/ownCloud/imagine_weights/screw_detector/pretrained_models/weigts_InceptionResNetV2'
-WEIGHTS_FINAL = weight_directory + '/model-final.h5'
+def main(args: list[str] | None = None) -> None:
+    parser = build_parser()
+    namespace = parser.parse_args(args=args)
 
-train_datagen = ImageDataGenerator(rescale=1./255,
-                                   rotation_range=20,
-                                   width_shift_range=0.1, height_shift_range=0.1, 
-                                   shear_range=0.01, zoom_range=[0.9,1.25],
-                                   horizontal_flip=True,
-				   vertical_flip=True,
-				   brightness_range=[0.4,1.5],
-                                   fill_mode='reflect')
-train_batches = train_datagen.flow_from_directory(DATASET_PATH_train,
-                                                  target_size=IMAGE_SIZE,
-                                                  class_mode='categorical',
-                                                  shuffle=True,
-                                                  batch_size=BATCH_SIZE)
+    try:
+        train_model(
+            "inceptionresnetv2",
+            train_dir=namespace.train_dir,
+            val_dir=namespace.val_dir,
+            output_weights=namespace.output_weights,
+            log_dir=namespace.log_dir,
+            batch_size=namespace.batch_size,
+            epochs=namespace.epochs,
+            freeze_layers=namespace.freeze_layers,
+            learning_rate=namespace.learning_rate,
+            initial_weights=namespace.initial_weights,
+        )
+    except MissingDependencyError as exc:
+        parser.error(str(exc))
 
-valid_datagen = ImageDataGenerator(rescale=1./255)
-valid_batches = valid_datagen.flow_from_directory(DATASET_PATH_val,
-                                                  target_size=IMAGE_SIZE,
-                                                  class_mode='categorical',
-                                                  shuffle=False,
-                                                  batch_size=BATCH_SIZE)
 
-# show class indices
-print('****************')
-classes_name = [0 for i in range(NUM_CLASSES)]
-for cls, idx in train_batches.class_indices.items():
-    print('Class #{} = {}'.format(idx, cls))
-    classes_name[idx] = cls
-print(classes_name)
-print('****************')
-
-# build our classifier model based on pre-trained model:
-# 1. we don't include the top (fully connected) layers of pretrained models
-# 2. we add a DropOut layer followed by a Dense (fully connected)
-#    layer which generates softmax class score for each class
-# 3. we compile the final model using an Adam optimizer, with a
-#    low learning rate (since we are 'fine-tuning')
-base_model = InceptionResNetV2(include_top=False,
-                        weights='imagenet',
-                        input_tensor=None,
-                        input_shape=(IMAGE_SIZE[0],IMAGE_SIZE[1],3))
-for layer in base_model.layers:
-    layer.trainable = True
-
-# add a global spatial average pooling layer
-x = base_model.output
-x = GlobalAveragePooling2D(name='avg_pool')(x)
-x = Dropout(0.5)(x)
-
-# and a logistic layer -- let's say we have 2 classes
-predictions = Dense(NUM_CLASSES, activation='softmax')(x)
-
-# this is the model we will train
-model = Model(inputs=base_model.input, outputs=predictions)
-
-print(len(model.layers))
-tensorboard_callback = TensorBoard(log_dir=tensorboard_directory, 
-                                                       histogram_freq=0,
-                                                       write_graph=True,
-                                                       write_images=False)
-save_model_callback = ModelCheckpoint(os.path.join(weight_directory, 'weights.{epoch:02d}.h5'),
-                                                        verbose=3,
-                                                        save_best_only=False,
-                                                        save_weights_only=False,
-                                                        mode='auto',
-                                                        period=1)
-
-#compile model
-model.compile(optimizer=Adam(lr=1e-5, beta_1=0.9, beta_2=0.999, epsilon=1e-8, decay=1e-9, amsgrad=True), loss='categorical_crossentropy',
-                  metrics=['accuracy'])
-
-print(model.summary())
-
-# train the model
-model.fit_generator(train_batches,
-                        steps_per_epoch = train_batches.samples // BATCH_SIZE,
-                        validation_data = valid_batches, 
-                        validation_steps = valid_batches.samples // BATCH_SIZE,
-                        callbacks=[save_model_callback, tensorboard_callback],
-                        epochs = NUM_EPOCHS)
-
-# save trained weight
-model.save(WEIGHTS_FINAL)
-
+if __name__ == "__main__":  # pragma: no cover
+    main()
