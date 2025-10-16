@@ -10,7 +10,7 @@ This repository provides the complete source code and resources for the paper *[
 - 🚀 **Modern TensorFlow 2.x**: Updated from legacy TF 1.x codebase
 - 🐍 **Pure Python**: No ROS required for standalone usage
 
-![Screw Detection Sample](assets/sample.png)
+![Screw Detection Output Example](assets/output.png)
 
 ---
 
@@ -50,7 +50,7 @@ python evaluate/evaluate_detection.py \
 ### Full Detection on Your Own Image
 ```bash
 # Download models first (see Installation section)
-python standalone_detection.py \
+python scripts/standalone_detection.py \
   --image your_image.jpg \
   --model1 models/xception.h5 \
   --model2 models/inceptionv3.h5 \
@@ -85,14 +85,17 @@ pip install -r requirements.txt
 
 **Option A: Automated Download** (requires `unrar`):
 ```bash
-python setup.py
+python scripts/download_data.py
 ```
 
 **Option B: Manual Download**:
 - Dataset: [ScrewDTF dataset](https://zenodo.org/records/4727706) (~1.8GB)
 - Pre-trained weights: [Model weights](https://zenodo.org/records/10474868) (~2.1GB)
 
-> **Note**: The dataset from Zenodo comes in TFRecord format. After extraction, run `python ScrewDTF/tfreader.py` to convert TFRecords to JPG images organized by label.
+> **Note**: The dataset from Zenodo comes in TFRecord format. After extraction, run the conversion script to convert TFRecords to JPG images:
+> ```bash
+> python scripts/convert_tfrecords.py
+> ```
 
 **Expected folder structure after extraction and conversion**:
 ```
@@ -139,7 +142,7 @@ python src/prediction_xception.py \
 
 **Test all 6 models at once**:
 ```bash
-python test_all_classifiers.py
+python scripts/test_all_classifiers.py
 ```
 
 **Available architectures**: `xception`, `inceptionv3`, `inceptionresnetv2`, `densenet201`, `resnet101v2`, `resnext101`
@@ -159,7 +162,7 @@ End-to-end screw detection on any image (no ROS required).
 
 **Basic usage**:
 ```bash
-python standalone_detection.py \
+python scripts/standalone_detection.py \
   --image your_image.jpg \
   --model1 models/xception.h5 \
   --model2 models/inceptionv3.h5 \
@@ -180,10 +183,10 @@ Detected 1 screws:
 **Advanced options**:
 ```bash
 # Adjust detection threshold
-python standalone_detection.py --image input.jpg --threshold 0.3 --output result.jpg
+python scripts/standalone_detection.py --image input.jpg --threshold 0.3 --output result.jpg
 
 # Tune Hough parameters for different screw sizes
-python standalone_detection.py --image input.jpg \
+python scripts/standalone_detection.py --image input.jpg \
   --min-radius 10 \
   --max-radius 50 \
   --hough-upper 150 \
@@ -191,16 +194,16 @@ python standalone_detection.py --image input.jpg \
   --output result.jpg
 
 # Use different model combination
-python standalone_detection.py --image input.jpg \
+python scripts/standalone_detection.py --image input.jpg \
   --model1 models/resnet101v2.h5 \
   --model2 models/densenet201.h5 \
   --output result.jpg
 
 # Display result window
-python standalone_detection.py --image input.jpg --show
+python scripts/standalone_detection.py --image input.jpg --show
 
 # Use GPU
-python standalone_detection.py --image input.jpg --use-gpu --output result.jpg
+python scripts/standalone_detection.py --image input.jpg --use-gpu --output result.jpg
 ```
 
 **Batch processing**:
@@ -208,7 +211,7 @@ python standalone_detection.py --image input.jpg --use-gpu --output result.jpg
 #!/bin/bash
 for img in input_images/*.jpg; do
     output="results/$(basename $img)"
-    python standalone_detection.py --image "$img" --output "$output"
+    python scripts/standalone_detection.py --image "$img" --output "$output"
 done
 ```
 
@@ -219,7 +222,7 @@ Full detection pipeline integrated with ROS (Robot Operating System).
 
 **Use when**: Integrating with robotics hardware, real-time camera streams, ROS-based systems.
 
-**File**: `ros_detection.py` (formerly `candidate_generator.py`)
+**File**: `scripts/ros_detection.py` (formerly `candidate_generator.py`)
 
 **Requirements**:
 - ROS (Kinetic/Melodic/Noetic)
@@ -324,17 +327,18 @@ screw_detection/
 ├── README.md                           # This file
 ├── requirements.txt                    # Python dependencies
 ├── .gitignore                          # Git exclusions
-├── conftest.py                         # Import path setup
-├── setup.py                            # Dataset/weights downloader
 │
-├── standalone_detection.py             # 🆕 End-to-end detection (no ROS)
-├── ros_detection.py                    # ROS-integrated detection
-├── test_all_classifiers.py             # Test all 6 models
+├── scripts/                            # 🆕 Utility & runnable scripts
+│   ├── download_data.py                # Download dataset & model weights
+│   ├── convert_tfrecords.py            # Convert TFRecord dataset to JPG
+│   ├── standalone_detection.py         # End-to-end detection (no ROS)
+│   ├── ros_detection.py                # ROS-integrated detection
+│   └── test_all_classifiers.py         # Test all 6 models
 │
-├── src/                                # Source code
+├── src/                                # Core library code
 │   ├── pipelines/
 │   │   ├── __init__.py
-│   │   └── classification.py          # Core training/inference logic
+│   │   └── classification.py          # Training/inference logic
 │   │
 │   ├── resnet.py                       # ResNeXt implementation
 │   │
@@ -348,11 +352,12 @@ screw_detection/
 │   └── gt_test.txt                    # Ground truth annotations
 │
 ├── tests/                              # Unit tests
+│   ├── conftest.py                    # Pytest import configuration
 │   ├── test_evaluate_detection.py
 │   └── test_pipelines_classification.py
 │
-├── assets/                             # Images for documentation
-│   └── sample.png
+├── assets/                             # Example output images
+│   └── output.png
 │
 # Data folders (not in git, download separately):
 ├── models/                             # Pre-trained weights (.h5)
