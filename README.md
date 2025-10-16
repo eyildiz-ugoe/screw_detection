@@ -90,7 +90,7 @@ python scripts/download_data.py
 
 **Option B: Manual Download**:
 - Dataset: [ScrewDTF dataset](https://zenodo.org/records/4727706) (~1.8GB)
-- Pre-trained weights: [Model weights](https://zenodo.org/records/10474868) (~2.1GB)
+- Pre-trained weights: [Model weights on Google Drive](https://drive.google.com/drive/folders/1XwoDC7XyV9kqFojO2h3B2zyLZmBcBdXF?usp=sharing) (~2.1GB - 6 models)
 
 > **Note**: The dataset from Zenodo comes in TFRecord format. After extraction, run the conversion script to convert TFRecords to JPG images:
 > ```bash
@@ -382,7 +382,7 @@ All models are trained on the ScrewDTF dataset and achieve high accuracy:
 | InceptionV3 | 139×139 | 251 MB | 91.08% | Good for ensemble |
 | DenseNet201 | 221×221 | 212 MB | 89.60% | Largest input size |
 
-**Model weights**: Download from [Zenodo](https://zenodo.org/records/10474868)
+**Model weights**: Download all 6 models from [Google Drive](https://drive.google.com/drive/folders/1XwoDC7XyV9kqFojO2h3B2zyLZmBcBdXF?usp=sharing)
 
 ---
 
@@ -422,7 +422,7 @@ If this work is helpful in your research, please cite:
 
 **Dataset**: [ScrewDTF on Zenodo](https://zenodo.org/records/4727706)
 
-**Model Weights**: [Pre-trained models on Zenodo](https://zenodo.org/records/10474868)
+**Model Weights**: [Pre-trained models on Google Drive](https://drive.google.com/drive/folders/1XwoDC7XyV9kqFojO2h3B2zyLZmBcBdXF?usp=sharing) (all 6 models)
 
 ---
 

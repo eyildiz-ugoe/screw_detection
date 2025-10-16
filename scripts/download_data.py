@@ -217,15 +217,5 @@ def main():
 
     logging.info("Setup completed successfully. If models were not downloaded automatically, please populate `models/` with the six .h5 files or update MODELS_MAP in scripts/download_data.py.")
 
-    # Ensure dataset extraction created required folders
-    folders = ['Test', 'Eval', 'Train']
-    for folder in folders:
-        folder_path = os.path.join(base_folder, folder)
-        if not os.path.exists(folder_path):
-            logging.error(f"Folder not found: {folder_path}")
-            return
-
-    logging.info("Setup completed successfully.")
-
 if __name__ == "__main__":
     main()
