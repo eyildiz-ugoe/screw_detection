@@ -445,7 +445,6 @@ python standalone_detection.py --image input.jpg --output result.jpg
 
 - **Issues**: [GitHub Issues](https://github.com/eyildiz-ugoe/screw_detection/issues)
 - **Author**: Erenus Yildiz
-- **Institution**: University of Göttingen
 
 ---
 
